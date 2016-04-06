@@ -1,0 +1,3 @@
+[submodule "melonJS"]
+	path = melonJS
+	url = git@github.com:melonjs/melonJS.git

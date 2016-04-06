@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "Philip Cali portfolio",
+  "devDependencies": {
+    "aws-sdk": "^2.3.1",
+    "grunt": "~0.4.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.3.13",
+    "grunt-replace": "^0.11.0",
+    "grunt-submodule": "0.1.0-rc3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/philcali/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Philip Cali",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "f8f3c681e91bdb348a73ca42f8dcfc85cb9501b5"
+}

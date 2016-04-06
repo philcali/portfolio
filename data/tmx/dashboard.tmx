@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" backgroundcolor="#00b6c5" nextobjectid="190">
  <tileset firstgid="1" name="dashboard" tilewidth="16" tileheight="16" tilecount="480" columns="30">
-  <image source="../images/dashboard_tiles.png" width="480" height="256"/>
+  <image source="../img/dashboard_tiles.png" width="480" height="256"/>
  </tileset>
  <tileset firstgid="481" name="ship_tiles" tilewidth="16" tileheight="16" tilecount="480" columns="30">
-  <image source="../images/ship_tiles.png" trans="007575" width="480" height="256"/>
+  <image source="../img/ship_tiles.png" trans="007575" width="480" height="256"/>
  </tileset>
  <layer name="background" width="60" height="40">
   <data encoding="base64">

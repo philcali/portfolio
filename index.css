@@ -1,9 +1,8 @@
 body {
-  background-color: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
-  
-   /* Allow mouse dragging. */
+  background-color: #000;
+  color: #fff;
+
+  /* Allow mouse dragging. */
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
@@ -13,16 +12,18 @@ body {
   /* disable touch panning/zooming */
   -ms-touch-action: none;
   touch-action: none;
-  overflow: hidden;
 
-  /* Allow canvas to hit the edges of the browser viewport. */ 
+  /* Allow canvas to hit the edges of the browser viewport. */
   margin: 0;
 }
 
 #screen canvas {
   margin: auto;
-  display: font;
-  
+
+  /* Hide the gap for font descenders. */
+  display: block;
+
+  /* disable scaling interpolation */
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;

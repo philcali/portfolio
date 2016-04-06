@@ -3,17 +3,18 @@
 <html>
 <head>
   <title>portfolio</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="index.css"/>
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
   <div id="screen"></div>
-  <script src="vendor/melonJS-min.js"></script>
-  <script src="vendor/plugins/debugPanel.js"></script>
+  <script src="lib/melonJS-min.js"></script>
+  <script src="lib/debugPanel.js"></script>
   <script src="js/game.js"></script>
   <script src="js/screens/play.js"></script>
   <script src="js/entities/player.js"></script>
-  <script src="js/resources.js"></script>
+  <script src="build/js/resources.js"></script>
   <script type="text/javascript">
     window.onReady(function() {
       game.onload();
