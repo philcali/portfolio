@@ -9,12 +9,14 @@
 
 <body>
   <div id="screen"></div>
-  <script src="lib/melonJS-min.js"></script>
-  <script src="lib/debugPanel.js"></script>
+  <!-- build:js build/js/app.min.js -->
+  <script src="lib/melonJS.js"></script>
+  <script src="lib/plugins/debug/debugPanel.js"></script>
   <script src="js/game.js"></script>
   <script src="js/screens/play.js"></script>
   <script src="js/entities/player.js"></script>
   <script src="build/js/resources.js"></script>
+  <!-- /build -->
   <script type="text/javascript">
     window.onReady(function() {
       game.onload();

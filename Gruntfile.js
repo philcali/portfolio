@@ -9,7 +9,8 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'lib/*.js',
+          'lib/melonJS.js',
+          'lib/plugins/*.js',
           'js/game.js',
           'build/js/resources.js',
           'js/**/*.js',
@@ -24,20 +25,23 @@ module.exports = function(grunt) {
           src: 'index.css',
           dest: 'build/index.css'
         }, {
+          expand: true,
           src: 'data/**/*',
-          dest: 'build/',
-          expand: true
+          dest: 'build/'
         }]
       },
 
       vendor: {
         files: [{
           expand: true,
-          src: [
-            'melonJS/build/melonJS.js',
-            'melonJS/plugins/debugPanel.js'
-          ],
-          dest: ['lib/']
+          cwd: 'melonJS/build',
+          src: 'melonJS.js',
+          dest: 'lib/'
+        }, {
+          expand: true,
+          cwd: 'melonJS',
+          src: 'plugins/**/debugPanel.js',
+          dest: 'lib/'
         }]
       }
     },
@@ -138,11 +142,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-submodule');
 
+  grunt.loadTasks('tasks');
   grunt.registerTask('melonJS', [ 'submodule', 'copy:vendor' ]);
-  grunt.registerTask('serve', [ 'melonJS', 'connect:keepalive' ]);
-
+  grunt.registerTask('serve', [ 'resources', 'connect', 'watch' ]);
   grunt.registerTask('default', [
-    'melonJs',
+    'melonJS',
     'resources',
     'concat',
     'replace',
