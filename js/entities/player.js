@@ -21,14 +21,14 @@ game.PlayerEntity = me.Entity.extend({
     this.direction = 'up';
     this.moving = false;
   },
-  
+
   bindInputs: function() {
     me.input.bindKey(me.input.KEY.A, 'left');
     me.input.bindKey(me.input.KEY.D, 'right');
     me.input.bindKey(me.input.KEY.W, 'up');
     me.input.bindKey(me.input.KEY.S, 'down');
   },
-  
+
   checkAndAnimate: function(direction) {
     if (!this.moving && me.input.isKeyPressed(direction)) {
       var checkDir = direction == 'left' ? 'right' : direction;
@@ -40,7 +40,7 @@ game.PlayerEntity = me.Entity.extend({
     }
     return false;
   },
-  
+
   performMovement: function() {
     var vel = { x: 0, y: 0 };
     switch (this.direction) {
@@ -58,14 +58,14 @@ game.PlayerEntity = me.Entity.extend({
     }
     return vel;
   },
-  
+
   resetMovement: function() {
     if (!this.moving) {
       this.moving = true;
       this.remainingFrames = this.movementFrames;
     }
   },
-  
+
   update: function(dt) {
     if (this.checkAndAnimate('left')) {
       this.resetMovement();
@@ -99,7 +99,7 @@ game.PlayerEntity = me.Entity.extend({
       this.body.vel.y !== 0
     );
   },
-  
+
   onCollision: function(response, other) {
     return true;
   }

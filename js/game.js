@@ -14,7 +14,7 @@ var game = {
     me.loader.preload(game.resources);
     me.state.change(me.state.LOADING);
   },
-  
+
   loaded: function() {
     me.state.set(me.state.PLAY, new game.PlayScreen());
     me.pool.register('mainPlayer', game.PlayerEntity);
