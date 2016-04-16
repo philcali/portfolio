@@ -96,6 +96,17 @@ module.exports = function(grunt) {
       }
     },
 
+    upload: {
+      dist: {
+        options: {
+          bucket: "philcali.me",
+        },
+        files: [{
+          src: 'build/**'
+        }]
+      }
+    },
+
     resources: {
       dist: {
         options: {
@@ -153,6 +164,7 @@ module.exports = function(grunt) {
     'uglify',
     'copy:dist',
     'processhtml',
-    'clean:app'
+    'clean:app',
+    'upload'
   ]);
 };

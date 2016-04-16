@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
     grunt.file.write(
       options.dest,
-      options.varname + " = " + JSON.stringify(res, null, 4) + ";"
+      options.varname + " = " + JSON.stringify(res, null, 2) + ";"
     );
     grunt.log.ok(options.dest)
   }
