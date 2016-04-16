@@ -1,6 +1,7 @@
 var game = {
   onload: function() {
-    if (!me.video.init(320, 240, {wrapper: 'screen', scale: 'auto', scaleMethod: 'flex-width'})) {
+    // scaleMethod: 'flex-width'
+    if (!me.video.init(320, 240, { wrapper: 'screen', scale: 'auto' })) {
       alert('Your browser does not support HTML5 canvas.');
       return;
     }
